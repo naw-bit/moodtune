@@ -1,16 +1,135 @@
-# React + Vite
+# MoodTune
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MoodTune est une application web développée avec React utilisant l’intelligence artificielle afin de générer des playlists musicales personnalisées selon l’humeur de l’utilisateur.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Installation et lancement du projet
 
-## React Compiler
+## 1. Télécharger le projet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Ouvrir le dépôt GitHub puis cliquer sur :
 
-## Expanding the ESLint configuration
+```text
+Code → Download ZIP
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Une fois le fichier téléchargé :
+
+* extraire le fichier ZIP ;
+* ouvrir le dossier obtenu (`moodtune-main` par exemple).
+
+---
+
+## 2. Ouvrir le projet dans Visual Studio Code
+
+Ouvrir Visual Studio Code.
+
+Puis :
+
+```text
+File → Open Folder
+```
+
+Sélectionner ensuite le dossier du projet extrait précédemment.
+
+---
+
+## 3. Ouvrir un terminal dans VS Code
+
+Dans la barre supérieure de Visual Studio Code :
+
+```text
+Terminal → New Terminal
+```
+
+Un terminal apparaîtra en bas de la fenêtre.
+
+Vérifier que le terminal se trouve bien dans le dossier du projet :
+
+```text
+...\moodtune-main>
+```
+
+---
+
+## 4. Autoriser temporairement les scripts PowerShell (Windows uniquement)
+
+Sur certains ordinateurs Windows, PowerShell bloque l’exécution des commandes npm par sécurité.
+
+Entrer alors la commande suivante dans le terminal :
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+Puis confirmer avec :
+
+```text
+O
+```
+
+et appuyer sur Entrée.
+
+Cette autorisation est uniquement temporaire et ne concerne que la session actuelle du terminal.
+
+---
+
+## 5. Installer les dépendances du projet
+
+Dans le terminal, entrer :
+
+```bash
+npm install
+```
+
+Cette commande installe automatiquement toutes les dépendances nécessaires au fonctionnement du projet (React, Vite, etc.).
+
+Patienter jusqu’à la fin de l’installation.
+
+---
+
+## 6. Lancer l’application
+
+Dans le terminal, entrer :
+
+```bash
+npm run dev
+```
+
+Le terminal affichera alors un lien similaire à :
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 7. Ouvrir l’application
+
+Effectuer :
+
+```text
+Ctrl + clic gauche
+```
+
+sur le lien affiché dans le terminal afin d’ouvrir MoodTune dans le navigateur.
+
+---
+
+# Important
+
+L’application utilise l’API Claude d’Anthropic.
+
+Pour des raisons de sécurité, la clé API personnelle n’est pas fournie dans le dépôt GitHub.
+
+Ainsi :
+
+* l’interface React ;
+* les animations ;
+* les thèmes dynamiques ;
+* et l’ensemble du frontend
+
+fonctionnent normalement.
+
+Cependant, la génération réelle des playlists nécessite d’ajouter une clé API Anthropic personnelle dans les headers de la requête.
